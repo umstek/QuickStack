@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("QuickStack")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("UMSTeK")]
 [assembly: AssemblyProduct("QuickStack")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCopyright("Copyright © UMSTeK 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
