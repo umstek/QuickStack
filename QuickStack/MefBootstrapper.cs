@@ -69,6 +69,5 @@ namespace QuickStack
                 Assembly.GetExecutingAssembly()
             };
         }
-
     }
 }

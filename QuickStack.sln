@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickStack", "QuickStack\QuickStack.csproj", "{44ACED1B-AE22-43B8-A902-C16F48034167}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{DA39229F-C47B-4BED-8FCD-F13DD033A8A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickStack.Test", "Test\QuickStack.Test.csproj", "{DA39229F-C47B-4BED-8FCD-F13DD033A8A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

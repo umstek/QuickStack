@@ -1,14 +1,16 @@
 ﻿<controls:MetroWindow
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:QuickStack"
-        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
-        xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit" xmlns:Dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro" x:Class="QuickStack.ShellView"
-        mc:Ignorable="d"
-        Title="QuickStack" Height="450" Width="800"
-        GlowBrush="{DynamicResource AccentColorBrush}" SnapsToDevicePixels="True" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:QuickStack"
+    xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
+    xmlns:Dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro" x:Class="QuickStack.ShellView"
+    mc:Ignorable="d"
+    Title="QuickStack" Height="450" Width="800"
+    GlowBrush="{DynamicResource AccentColorBrush}" SnapsToDevicePixels="True" ResizeMode="CanResizeWithGrip"
+    WindowStartupLocation="CenterScreen">
 
     <controls:MetroWindow.Resources>
         <ResourceDictionary>
@@ -23,15 +25,15 @@
             <Button x:Name="Settings">
                 <StackPanel Orientation="Horizontal">
                     <Rectangle Width="20"
-            			Height="20"
-            			Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}}}">
+                               Height="20"
+                               Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}}}">
                         <Rectangle.OpacityMask>
                             <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_settings}" />
                         </Rectangle.OpacityMask>
                     </Rectangle>
                     <TextBlock Margin="4 0 0 0"
-            			VerticalAlignment="Center"
-            			Text="Settings" />
+                               VerticalAlignment="Center"
+                               Text="Settings" />
                 </StackPanel>
             </Button>
         </controls:WindowCommands>
@@ -39,19 +41,20 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="26"/>
-            <RowDefinition/>
+            <RowDefinition Height="26" />
+            <RowDefinition />
         </Grid.RowDefinitions>
         <avalonEdit:TextEditor
-			xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit" 
-			x:Name="TextEditor" 
-			SyntaxHighlighting="C#"
-			FontFamily="Consolas" ShowLineNumbers="True" Margin="0,10,0,173" Grid.Row="1"/>
-        <Label x:Name="LanguageLabel" Content="Language: " HorizontalAlignment="Left" Width="68" Height="26"/>
-        <ComboBox x:Name="Languages" HorizontalAlignment="Left" Margin="73,0,0,0" Width="120" Height="26"/>
-        <Label x:Name="TemplateLabel" Content="Template: " HorizontalAlignment="Left" Margin="198,0,0,0" Width="64" Height="26"/>
-        <ComboBox x:Name="Templates" HorizontalAlignment="Left" Margin="267,0,0,0" Width="120" Height="26"/>
-        <Button x:Name="Run" Content="Run" HorizontalAlignment="Right" Width="75" Height="26"/>
+            xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+            x:Name="TextEditor"
+            SyntaxHighlighting="C#"
+            FontFamily="Consolas" ShowLineNumbers="True" Margin="0,10,0,173" Grid.Row="1" />
+        <Label x:Name="LanguageLabel" Content="Language: " HorizontalAlignment="Left" Width="68" Height="26" />
+        <ComboBox x:Name="Languages" HorizontalAlignment="Left" Margin="73,0,0,0" Width="120" Height="26" />
+        <Label x:Name="TemplateLabel" Content="Template: " HorizontalAlignment="Left" Margin="198,0,0,0" Width="64"
+               Height="26" />
+        <ComboBox x:Name="Templates" HorizontalAlignment="Left" Margin="267,0,0,0" Width="120" Height="26" />
+        <Button x:Name="Run" Content="Run" HorizontalAlignment="Right" Width="75" Height="26" />
 
     </Grid>
 </controls:MetroWindow>
