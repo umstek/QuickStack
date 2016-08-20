@@ -65,12 +65,10 @@ namespace Test.Util
         public void Cleanup()
         {
             const string path = @".\data\";
+            if (!Directory.Exists(path)) return;
 
-            if (Directory.Exists(path))
-            {
-                Directory.GetFiles(path).ToList().ForEach(File.Delete);
-                Directory.Delete(path);
-            }
+            Directory.GetFiles(path).ToList().ForEach(File.Delete);
+            Directory.Delete(path);
         }
     }
 }

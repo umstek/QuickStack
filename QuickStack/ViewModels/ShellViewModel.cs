@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using Caliburn.Micro;
+using QuickStack.ViewModels.Flyouts;
 
-namespace QuickStack
+namespace QuickStack.ViewModels
 {
     [Export(typeof(IShell))]
-    public class ShellViewModel : PropertyChangedBase, IShell
+    public class ShellViewModel : Screen, IShell
     {
+        public IObservableCollection<FlyoutViewModelBase> Flyouts { get; set; } =
+            new BindableCollection<FlyoutViewModelBase>() { };
+
         public IObservableCollection<string> Languages { get; set; } =
             new BindableCollection<string>(new List<string>
             {
@@ -25,11 +29,16 @@ namespace QuickStack
             });
 
         public string SelectedLanguage { get; set; } = "C# 6";
-        public bool CanRun() => false;
+        public bool CanRun() => true;
 
         public void Run()
         {
             Console.WriteLine(@"Run");
+        }
+
+        public void CreateTerminal()
+        {
+            Flyouts.Add(new TerminalFlyoutViewModel());
         }
     }
 }
