@@ -12,7 +12,7 @@
     mc:Ignorable="d"
     Title="QuickStack" Height="450" Width="800"
     GlowBrush="{DynamicResource AccentColorBrush}" SnapsToDevicePixels="True" ResizeMode="CanResizeWithGrip"
-    WindowStartupLocation="CenterScreen">
+    WindowStartupLocation="CenterScreen" IconOverlayBehavior="Always">
 
     <controls:MetroWindow.Resources>
         <ResourceDictionary>
@@ -69,13 +69,19 @@
             x:Name="TextEditor"
             SyntaxHighlighting="C#"
             FontFamily="Consolas" ShowLineNumbers="True" Margin="0,10,0,173" Grid.Row="1" />
-        <Label x:Name="LanguageLabel" Content="Language: " HorizontalAlignment="Left" Width="68" Height="26" />
-        <ComboBox x:Name="Languages" HorizontalAlignment="Left" Margin="73,0,0,0" Width="120" Height="26" />
-        <Label x:Name="TemplateLabel" Content="Template: " HorizontalAlignment="Left" Margin="198,0,0,0" Width="64"
+        <Label Grid.Row="0" x:Name="LanguageLabel" Content="Language: " HorizontalAlignment="Left" Width="68"
                Height="26" />
-        <ComboBox x:Name="Templates" HorizontalAlignment="Left" Margin="267,0,0,0" Width="120" Height="26" />
-        <Button x:Name="Run" Content="Run" HorizontalAlignment="Right" Width="75" Height="26" />
-        <Button x:Name="CreateTerminal" Content="New Terminal" HorizontalAlignment="Left" Margin="619,0,0,0" VerticalAlignment="Top" Width="93"/>
+        <ComboBox Grid.Row="0" x:Name="Languages" HorizontalAlignment="Left" Margin="73,0,0,0" Width="120" Height="26" />
+        <Label Grid.Row="0" x:Name="TemplateLabel" Content="Template: " HorizontalAlignment="Left" Margin="198,0,0,0"
+               Width="64"
+               Height="26" />
+        <ComboBox Grid.Row="0" x:Name="Templates" HorizontalAlignment="Left" Margin="267,0,0,0" Width="120" Height="26" />
+        <Button Grid.Row="0" x:Name="Run" Content="Run" HorizontalAlignment="Right" Width="75" Height="26" />
+        <Button Grid.Row="0" x:Name="CreateTerminal" Content="New Terminal" HorizontalAlignment="Left"
+                Margin="619,0,0,0" VerticalAlignment="Top" Width="93" />
+        <controls:SplitButton x:Name="Terminals" SelectedItem="{Binding SelectedTerminal}"
+                              cal:Message.Attach="[Event Click] = [Action ActivateTerminal(SelectedTerminal)];"
+                              Grid.Row="0" HorizontalAlignment="Left" Margin="444,0,0,0" Width="100" />
 
     </Grid>
 </controls:MetroWindow>

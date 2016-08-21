@@ -20,7 +20,7 @@ namespace Test.Util
         {
             const string path = @".\data\testobj.json";
 
-            Persistence.SerializeToJson(new { w = 0, x = 10, y = 20, z = 30 }, path);
+            Persistence.SerializeToJson(new {w = 0, x = 10, y = 20, z = 30}, path);
 
             Assert.IsTrue(File.Exists(path)); // File written! 
             Assert.IsTrue(File.ReadAllText(path).Length > 20); // Guessing the length of the JSON. 
@@ -32,7 +32,7 @@ namespace Test.Util
         [TestMethod]
         public void TestDeserializeFromDisk()
         {
-            var targetDog = new Dog("tommy") { Friends = { new Dog("kadiya"), new Dog("snowy") } };
+            var targetDog = new Dog("tommy") {Friends = {new Dog("kadiya"), new Dog("snowy")}};
             const string path = @".\data\testdog.json";
 
             Persistence.SerializeToJson(targetDog, path); // Save
@@ -49,7 +49,7 @@ namespace Test.Util
         {
             const string path = @".\data\testobj.json";
             const string example = @"{""w"":0,""x"":10,""y"":20,""z"":30}";
-            var sample = new { w = 0, x = 10, y = 20, z = 30 };
+            var sample = new {w = 0, x = 10, y = 20, z = 30};
 
             // ReSharper disable once AssignNullToNotNullAttribute
             Directory.CreateDirectory(Path.GetDirectoryName(path)); // Create the directory if not exists.
